@@ -14,6 +14,10 @@ public class MarsRover {
         coordinates.setCoord(value);
     }
 
+    public void updateDirection(String n) {
+        direction.setDirection(n);
+    }
+
     public Point getStartingPoint() {
         return coordinates.getCoord();
     }

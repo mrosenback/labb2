@@ -26,4 +26,15 @@ public class MarsRoverTest {
         new Move(marsRover, "b");
         assertEquals(new Point(1,2), marsRover.getStartingPoint());
     }
+
+    @Test
+    public void testRotateLeftOrRight() {
+        MarsRover marsRover = new MarsRover(new Point(1,2), "N");
+
+        new Move(marsRover, "r");
+        assertEquals("E", marsRover.getDirection());
+
+        new Move(marsRover, "l");
+        assertEquals("N", marsRover.getDirection());
+    }
 }
