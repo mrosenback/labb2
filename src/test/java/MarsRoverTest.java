@@ -37,4 +37,16 @@ public class MarsRoverTest {
         new Move(marsRover, "l");
         assertEquals("N", marsRover.getDirection());
     }
+
+    @Test
+    public void testCoordinateWrapping() {
+        MarsRover marsRover1 = new MarsRover(new Point(5,1), "N");
+        MarsRover marsRover2 = new MarsRover(new Point(1,1), "W");
+
+        new Move(marsRover1, "f");
+        assertEquals(new Point(1,1), marsRover1.getStartingPoint());
+
+        new Move(marsRover2, "f");
+        assertEquals(new Point(5,1), marsRover2.getStartingPoint());
+    }
 }
