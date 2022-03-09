@@ -10,6 +10,10 @@ public class MarsRover {
         direction = new Direction(n);
     }
 
+    public void updateCoordinates(Point value) {
+        coordinates.setCoord(value);
+    }
+
     public Point getStartingPoint() {
         return coordinates.getCoord();
     }

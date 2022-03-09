@@ -15,4 +15,15 @@ public class MarsRoverTest {
     public void testStartingDirection() {
         assertEquals("N", new MarsRover(new Point(1,1), "N").getDirection());
     }
+
+    @Test
+    public void testMovingForwardsAndBackwards() {
+        MarsRover marsRover = new MarsRover(new Point(1,2), "N");
+
+        new Move(marsRover, "f");
+        assertEquals(new Point(2,2), marsRover.getStartingPoint());
+
+        new Move(marsRover, "b");
+        assertEquals(new Point(1,2), marsRover.getStartingPoint());
+    }
 }

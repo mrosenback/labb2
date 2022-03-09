@@ -3,12 +3,12 @@ public class Direction {
     private String direction;
 
 
-    public Direction(String value) {
-        setDirection(value);
+    public Direction(String n) {
+        setDirection(n);
     }
 
-    public void setDirection(String value) {
-        direction = value;
+    public void setDirection(String n) {
+        direction = n;
     }
 
     public String getDirection() {
