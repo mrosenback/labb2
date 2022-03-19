@@ -13,6 +13,15 @@ public class Move {
             case "f":
                 switch (direction) {
                     case "N" -> {
+                        if(y == 5) {
+                            y = 1;
+                        } else {
+                            y += 1;
+                        }
+                        coord.setLocation(x, y);
+                        marsRover.updateCoordinates(coord);
+                    }
+                    case "E" -> {
                         if(x == 5) {
                             x = 1;
                         } else {
@@ -21,30 +30,20 @@ public class Move {
                         coord.setLocation(x, y);
                         marsRover.updateCoordinates(coord);
                     }
-                    case "E" -> {
-                        if(y == 5) {
-                            y = 1;
-                            x = 5;
-                        } else {
-                            y += 1;
-                        }
-                        coord.setLocation(x, y);
-                        marsRover.updateCoordinates(coord);
-                    }
                     case "S" -> {
-                        if(x == 1) {
-                            x = 5;
+                        if(y == 1) {
+                            y = 5;
                         } else {
-                            x -= 1;
+                            y -= 1;
                         }
                         coord.setLocation(x, y);
                         marsRover.updateCoordinates(coord);
                     }
                     case "W" -> {
-                        if(y == 1) {
+                        if(x == 1) {
                             x = 5;
                         } else {
-                            y -= 1;
+                            x -= 1;
                         }
                         coord.setLocation(x, y);
                         marsRover.updateCoordinates(coord);
@@ -54,6 +53,15 @@ public class Move {
             case "b":
                 switch (direction) {
                     case "N" -> {
+                        if(y == 1) {
+                            y = 5;
+                        } else {
+                            y -= 1;
+                        }
+                        coord.setLocation(x, y);
+                        marsRover.updateCoordinates(coord);
+                    }
+                    case "E" -> {
                         if(x == 1) {
                             x = 5;
                         } else {
@@ -62,30 +70,20 @@ public class Move {
                         coord.setLocation(x, y);
                         marsRover.updateCoordinates(coord);
                     }
-                    case "E" -> {
-                        if(y == 1) {
-                            x = 5;
-                        } else {
-                            y -= 1;
-                        }
-                        coord.setLocation(x, y);
-                        marsRover.updateCoordinates(coord);
-                    }
                     case "S" -> {
-                        if(x == 5) {
-                            x = 1;
+                        if(y == 5) {
+                            y = 1;
                         } else {
-                            x += 1;
+                            y += 1;
                         }
                         coord.setLocation(x, y);
                         marsRover.updateCoordinates(coord);
                     }
                     case "W" -> {
-                        if(y == 5) {
-                            y = 1;
-                            x = 5;
+                        if(x == 5) {
+                            x = 1;
                         } else {
-                            y += 1;
+                            x += 1;
                         }
                         coord.setLocation(x, y);
                         marsRover.updateCoordinates(coord);
